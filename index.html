@@ -1,146 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VBook</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f0f2f5;
-  --text:#1c1e21;
-  --muted:#606770;
-  --primary:#1877f2;
-  --primary-press:#166fe0;
-  --success:#42b72a;
-  --success-press:#36a420;
-  --card:#fff;
-  --border:#dddfe2;
-  --ring:rgba(24,119,242,0.35);
-  --error:#e53935;
-  --link:#1877f2;
-  --font:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text)}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-.page{min-height:100dvh;display:flex;flex-direction:column}
-.main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px}
-.wrap{width:100%;max-width:1000px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
-.brand{
-  display:flex;flex-direction:column;gap:12px
-}
-.logo{
-  font-size:58px;line-height:1;font-weight:800;letter-spacing:-0.5px;color:var(--primary)
-}
-.tag{font-size:28px;color:#1c1e21;max-width:500px}
-.card{
-  background:var(--card);border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1);
-  padding:16px;border:1px solid rgba(0,0,0,0.02)
-}
-.form{display:flex;flex-direction:column;gap:12px}
-.input{
-  width:100%;padding:14px 12px;border:1px solid var(--border);border-radius:6px;background:#fff;font-size:16px
-}
-.input:focus{outline:3px solid var(--ring);border-color:#c6dafc}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
-  border:none;border-radius:6px;height:48px;padding:0 16px;cursor:pointer;font-weight:600;font-size:17px;color:#fff;background:var(--primary)
-}
-.btn:hover{background:var(--primary-press)}
-.btn:focus{outline:3px solid var(--ring)}
-.btn-secondary{
-  background:var(--success);margin-top:8px
-}
-.btn-secondary:hover{background:var(--success-press)}
-.forgot{display:block;text-align:center;font-size:14px;color:var(--link);margin-top:4px}
-.hr{display:flex;align-items:center;gap:12px;margin:12px 0}
-.hr span{height:1px;background:var(--border);flex:1}
-.meta{margin-top:24px;text-align:center;font-size:14px;color:var(--muted)}
-.meta a{font-weight:600}
-.footer{background:transparent;margin-top:40px}
-.footer .inner{max-width:1000px;margin:0 auto;padding:24px;color:#8a8d91;font-size:12px}
-.langs{display:flex;flex-wrap:wrap;gap:10px 16px;margin-bottom:10px}
-.langs a{color:#8a8d91}
-.links{display:flex;flex-wrap:wrap;gap:10px 16px}
-.copy{margin-top:16px}
-@media (max-width:900px){
-  .wrap{grid-template-columns:1fr;gap:24px}
-  .brand{align-items:center;text-align:center}
-  .logo{font-size:48px}
-  .tag{font-size:22px}
-}
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#0f1115;--text:#e6e7eb;--muted:#a1a6b0;--card:#151923;--border:#273044;
-    --ring:rgba(24,119,242,0.5)
-  }
-  a{color:#79a9ff}
-  .logo{color:#79a9ff}
-  .tag{color:#e6e7eb}
-}
-</style>
-</head>
-<body>
-<div class="page">
-  <main class="main">
-    <div class="wrap">
-      <section class="brand" aria-label="Intro">
-        <div class="logo" aria-label="VBook">VBook</div>
-        <div class="tag">Connect with friends and the world around on VBook.</div>
-      </section>
-      <section aria-label="Login">
-        <div class="card">
-          <form class="form" action="#" method="post" novalidate>
-            <input class="input" type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-            <input class="input" type="password" name="password" placeholder="Password" aria-label="Password" required>
-            <button class="btn" type="submit">Log in</button>
-            <a class="forgot" href="#">Forgotten password?</a>
-            <div class="hr"><span></span><div style="color:#8a8d91;font-size:12px">or</div><span></span></div>
-            <button class="btn btn-secondary" type="button">Create new account</button>
-          </form>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VBook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <main class="main">
+        <div class="wrap">
+          <section class="brand" aria-label="Intro">
+            <div class="logo" aria-label="VBook">VBook</div>
+            <div class="tag">
+              Connect with friends and the world around on VBook.
+            </div>
+          </section>
+          <section aria-label="Login">
+            <div class="card">
+              <form class="form" action="#" method="post" novalidate>
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  aria-label="Email address"
+                  required
+                />
+                <input
+                  class="input"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  aria-label="Password"
+                  required
+                />
+                <button class="btn" type="submit">Log in</button>
+                <a class="forgot" href="#">Forgotten password?</a>
+                <div class="hr">
+                  <span></span>
+                  <div style="color: #8a8d91; font-size: 12px">or</div>
+                  <span></span>
+                </div>
+                <button class="btn btn-secondary" type="button">
+                  Create new account
+                </button>
+              </form>
+            </div>
+            <div class="meta">
+              <a href="#">Create a Page</a> for a celebrity, brand or business.
+            </div>
+          </section>
         </div>
-        <div class="meta"><a href="#">Create a Page</a> for a celebrity, brand or business.</div>
-      </section>
+      </main>
+      <footer class="footer">
+        <div class="inner">
+          <div class="langs">
+            <a href="#" lang="en">English (UK)</a>
+            <a href="#" lang="hi">हिन्दी</a>
+            <a href="#" lang="bn">বাংলা</a>
+            <a href="#" lang="te">తెలుగు</a>
+            <a href="#" lang="mr">मराठी</a>
+            <a href="#" lang="ta">தமிழ்</a>
+            <a href="#" lang="pa">ਪੰਜਾਬੀ</a>
+            <a href="#" lang="gu">ગુજરાતી</a>
+            <a href="#" lang="ml">മലയാളം</a>
+            <a href="#" lang="kn">ಕನ್ನಡ</a>
+          </div>
+          <div class="links">
+            <a href="#">Sign Up</a>
+            <a href="#">Log in</a>
+            <a href="#">Messenger</a>
+            <a href="#">VBook Lite</a>
+            <a href="#">Video</a>
+            <a href="#">Places</a>
+            <a href="#">Games</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Groups</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">AdChoices</a>
+            <a href="#">Terms</a>
+            <a href="#">Help</a>
+          </div>
+          <div class="copy">VBook © 2025</div>
+        </div>
+      </footer>
     </div>
-  </main>
-  <footer class="footer">
-    <div class="inner">
-      <div class="langs">
-        <a href="#" lang="en">English (UK)</a>
-        <a href="#" lang="hi">हिन्दी</a>
-        <a href="#" lang="bn">বাংলা</a>
-        <a href="#" lang="te">తెలుగు</a>
-        <a href="#" lang="mr">मराठी</a>
-        <a href="#" lang="ta">தமிழ்</a>
-        <a href="#" lang="pa">ਪੰਜਾਬੀ</a>
-        <a href="#" lang="gu">ગુજરાતી</a>
-        <a href="#" lang="ml">മലയാളം</a>
-        <a href="#" lang="kn">ಕನ್ನಡ</a>
-      </div>
-      <div class="links">
-        <a href="#">Sign Up</a>
-        <a href="#">Log in</a>
-        <a href="#">Messenger</a>
-        <a href="#">VBook Lite</a>
-        <a href="#">Video</a>
-        <a href="#">Places</a>
-        <a href="#">Games</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Groups</a>
-        <a href="#">Privacy</a>
-        <a href="#">Cookies</a>
-        <a href="#">AdChoices</a>
-        <a href="#">Terms</a>
-        <a href="#">Help</a>
-      </div>
-      <div class="copy">VBook © 2025</div>
-    </div>
-  </footer>
-</div>
-</body>
+  </body>
 </html>
