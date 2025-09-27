@@ -11,7 +11,7 @@ Accessible form fields, focus states, and dark‑mode support
 
 Live Preview
 
-GitHub Pages: https://TheVaibhawKumar.github.io/vbook-homepage/
+GitHub Pages: https://thevaibhawkumar.github.io/vbook-homepage/
 
 Quick Start
 
